@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WeatherReport</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="weather.css" rel="stylesheet">
+</head>
+<body>
+    <div class="saksham" style=" max-width:100%" >
+        <h2 class="heading"><i>WEATHER REPORT</i></h2>
+        <img class="Slides" src="a.jpg" style="width:100%">
+        <img class="Slides" src="b.jpg" style="width:100%">
+        <img class="Slides" src="d.jpg" style="width:100%">
+         <a class="s_bt" href="#enter"><strong><i>Country Name</i></strong></a>
+         </div>
+         <section id="enter"><p></br></br></br></br></br></br></br></p>
+            <div id="display"
+            <center> <h1><center>COUNTRY NAME</center></h1></center></br></br></br>
+                       <div>
+                        <form class="" action="/" method="post">
+                             <div  class="col-xs-4" style="text-align:center;">
+                                     <input type="text" placeholder="country" class="form-control input-lg"  id="search2"/>
+                             </div>
+                             <center><button><a href="index.html" class="btn btn-primary" style = "margin-top: 10px" >GO</a></button>
+                             </center><p></br></br></br></br></br></br></br></br></br></p>
+                        </form>
+                           </div>
+                        </div>
+                     </section>
+         
+</body>
+<script>
+    var index = 0;
+    scroll();
+    function scroll() {
+      var i;
+      var x = document.getElementsByClassName("Slides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      index++;
+      if (index > x.length) {index = 1}    
+      x[index-1].style.display = "block";  
+      setTimeout(scroll, 4000); 
+    }
+    function colorchange(){
+var col=["#922B21","#9B59B6","#5DADE2","#2ECC71","#283747"];
+var  randomNum = (Math.floor(Math.random()*10))%8;
+var randomColor = col[randomNum];
+document.getElementsByClassName("heading")[0].style.color=randomColor;
+}
+setInterval(colorchange,1000);
+</script>
+</html>
